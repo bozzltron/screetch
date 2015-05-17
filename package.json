@@ -1,0 +1,35 @@
+{
+  "name": "screech",
+  "version": "1.0.0",
+  "description": "Generates base64 encoded screenshots based on url, width, and height",
+  "main": "server.js",
+  "nodeVersion": "0.11.x",
+  "dependencies": {
+    "koa": "^0.20.0",
+    "koa-routing": "^1.3.0",
+    "webpage": "^0.3.0"
+  },
+  "devDependencies": {
+    "koa": "^0.20.0",
+    "koa-routing": "^1.3.0",
+    "node-phantom": "^0.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bozzltron/screetch.git"
+  },
+  "keywords": [
+    "phantomjs",
+    "koa"
+  ],
+  "author": "bozzltron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bozzltron/screetch/issues"
+  },
+  "homepage": "https://github.com/bozzltron/screetch"
+}
