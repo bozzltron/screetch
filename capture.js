@@ -10,6 +10,6 @@ page.viewportSize = {
 
 page.open(args[1], function() {
   var base64 = page.renderBase64('PNG');
-  fs.write("/dev/stdout", base64, "w");
+  console.log(base64);
   phantom.exit();
 });

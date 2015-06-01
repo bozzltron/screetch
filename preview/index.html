@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//cdn.foundation5.zurb.com/foundation.css">
+		<style>
+		body {padding:20px;}
+		</style>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="content">
+
+			<input type="text" class="url" placeholder="url" />
+			<input type="text" class="height" placeholder="height" />
+			<input type="text" class="width" placeholder="width" />
+
+
+			<button class="button">Capture</button>
+
+			<br />
+
+			<div class="preview">
+				
+			</div>
+
+		</div>
+		
+		<script>
+			$(document).ready(function(){
+
+				$(".button").click(function(){
+
+					var query =  {
+						"url": $(".url").val(),
+						"height": $(".height").val(),
+						"width": $(".width").val()
+					};
+
+					$(".preview").html('<i class="fa fa-cog fa-spin"></i>');
+
+					$.get("/query?" + $.param(query), function(datauri){
+
+						$('.preview').html('<img src="' + datauri + '" />');
+
+					});
+
+				});
+
+			});
+		</script>
+	</body>
+
+</html>
